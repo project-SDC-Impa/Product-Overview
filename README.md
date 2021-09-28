@@ -4,8 +4,6 @@ Our team was tasking with...
 
 ## [Getting Started](https://github.com/teamkatara/Project-Catwalk/blob/main/getting-started.md)
 
-## [Production Optimization](https://github.com/teamkatara/Project-Catwalk/blob/main/optimization.md)
-
 ## Contributors
 
 ### Ryan Rhoads - Questions & Answers Widget [![Linkedin: LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/ryangrantrhoads/)](https://www.linkedin.com/in/ryangrantrhoads/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white&link=https://github.com/rgrhoads)](https://github.com/rgrhoads)
