@@ -1,4 +1,4 @@
-# Project Alteir - Team Impa
+# Team Impa - Project Alteir
 
 Our team was tasking with...
 
