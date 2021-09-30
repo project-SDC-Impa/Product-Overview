@@ -6,7 +6,7 @@ Our team was tasking with...
 
 ## Contributors
 
-### Ryan Rhoads - Product Overview [![Linkedin: LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/ryangrantrhoads/)](https://www.linkedin.com/in/ryangrantrhoads/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white&link=https://github.com/rgrhoads)](https://github.com/rgrhoads)
+### Ryan Rhoads [![Linkedin: LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/ryangrantrhoads/)](https://www.linkedin.com/in/ryangrantrhoads/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white&link=https://github.com/rgrhoads)](https://github.com/rgrhoads)
 
 Talk about Product Overview Endpoints - tell us something cool or noteworthy about your widget.
 
