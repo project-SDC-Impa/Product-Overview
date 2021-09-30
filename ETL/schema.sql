@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS products_database;
+CREATE DATABASE products_database;
+
 CREATE TABLE "product" (
   "id" integer,
   "name" varchar,
@@ -64,3 +67,9 @@ CREATE TABLE "feature" (
       REFERENCES "product"("id")
 );
 
+COPY product FROM '/Users/Rhoads/hackreactor/SDC/Products/csv-files/product.csv' DELIMITER ',' CSV HEADER;
+COPY related FROM '/Users/Rhoads/hackreactor/SDC/Products/csv-files/related.csv' DELIMITER ',' CSV HEADER;
+COPY styles FROM '/Users/Rhoads/hackreactor/SDC/Products/csv-files/styles.csv' DELIMITER ',' CSV HEADER;
+COPY photos FROM '/Users/Rhoads/hackreactor/SDC/Products/csv-files/photos.csv' DELIMITER ',' CSV HEADER;
+COPY skus FROM '/Users/Rhoads/hackreactor/SDC/Products/csv-files/skus.csv' DELIMITER ',' CSV HEADER;
+COPY feature FROM '/Users/Rhoads/hackreactor/SDC/Products/csv-files/feature.csv' DELIMITER ',' CSV HEADER;
