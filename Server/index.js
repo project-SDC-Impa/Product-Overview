@@ -38,70 +38,47 @@ app.get('/products/:product_id', (req, res) => {
     .catch((err) => console.log('Error: ', err));
 });
 
+const styleQuery = () => {
+
+}
+
 app.get('/products/:product_id/styles', (req, res) => {
   const { product_id } = req.params;
+  let text =
+    `SELECT
+      product_id,
 
-  db.query(`SELECT * FROM styles WHERE product_id = ${product_id}`)
-    .then(({ rows }) => {
-      console.log('STEP 1');
-      return rows;
-    })
-    .then((styles) => {
-      console.log('STEP 2'); //an array of style objects
-      let newStyles = {
-        product_id: product_id,
-        results: [], // [{},{},{}]
-      };
+      JSON_AGG( JSON_BUILD_OBJECT(
+        'style_id', styles.id,
+        'name', name,
+        'sale_price', sale_price,
+        'original_price', original_price,
+        'default?', styles.default_style,
+        'photos', (SELECT JSON_AGG(JSON_BUILD_OBJECT(
+          'thumbnail_url', thumbnail_url,
+          'url', url
+        ))
+        FROM photos
+        WHERE photos.style_id = styles.id),
+        'skus', (SELECT JSON_OBJECT_AGG(
+          id, JSON_BUILD_OBJECT(
+            'quantity', quantity,
+            'size', size
+          ))
+          AS skus
+          FROM skus
+          WHERE skus.style_id = styles.id
+          GROUP by style_id
+        ))
+      )
+      AS results
+      FROM styles
+      WHERE styles.product_id = $1
+      GROUP BY product_id;`;
 
-      styles.map((style) => {
-        newStyles.results.push({
-          "style_id": style.id,
-          "name": style.name,
-          "original_price": style.original_price,
-          "sale_price": style.sale_price,
-          "default?": style.default_style ? true : false,
-          "photos": [],
-          "skus": {},
-        })
-      })
-      return newStyles;
-    })
-    .then((newStyles) => {
-      console.log('STEP 3');
-
-      
-
-      return newStyles;
-    })
-    .then((newStyles) => {
-      console.log('END');
-      res.send(newStyles);
-    })
-    .catch((err) => console.log(err));
+      db.query(text, [product_id])
+            .then(({ rows }) => res.send(rows))
 });
-//   db.query(`SELECT * FROM styles WHERE product_id = ${product_id}`)
-//     .then(({ rows }) => {
-//       rows.map((style) => {
-//         newStyles.results.push({
-//           "style_id": style.id,
-//           "name": style.name,
-//           "original_price": style.original_price,
-//           "sale_price": style.sale_price,
-//           "default?": style.default_style ? true : false,
-//           "photos": [],
-//           "skus": {},
-//         });
-//       })
-//       console.log('STEP 1');
-//     })
-//     .then(console.log(newStyles))
-//     .then((styles) => res.send(styles))
-//     .catch((err) => console.log(err));
-// });
-
-// app.get('/products/:product_id/related', async (req, res) => {
-//   res.send('GET Product/id/related Success!');
-// });
 
 app.listen(PORT, () => {
   console.log(`Listening on Port: ${PORT}`);

@@ -4,7 +4,7 @@ CREATE DATABASE products_database;
 \c products_database;
 
 CREATE TABLE product (
-  id integer PRIMARY KEY,
+  id integer PRIMARY KEY, // done
   name varchar,
   slogan varchar,
   description varchar,
@@ -23,7 +23,7 @@ CREATE TABLE related (
 
 CREATE TABLE styles (
   id integer,
-  product_id integer,
+  product_id integer, //done
   name varchar,
   sale_price varchar,
   original_price varchar,
@@ -55,7 +55,7 @@ CREATE TABLE skus (
 
 CREATE TABLE feature (
   id integer,
-  product_id integer,
+  product_id integer, //done
   feature varchar,
   value varchar,
   PRIMARY KEY (id),

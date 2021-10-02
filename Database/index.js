@@ -15,8 +15,9 @@ pool.connect()
 .then(() => console.log('connected to database'))
 .catch((err) => console.log(err));
 
-const query = (text, params, callback) =>  pool.query(text, params, callback);
-
 module.exports = {
-  query: query,
+  async query(text, params, callback) {
+    const results = await pool.query(text, params, callback);
+    return results;
+  }
 };
