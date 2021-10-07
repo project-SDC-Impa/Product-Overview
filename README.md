@@ -2,7 +2,7 @@
 
 Our team was tasking with...
 
-## [Getting Started](https://github.com/teamkatara/Project-Catwalk/blob/main/getting-started.md)
+## [Getting Started](https://github.com/project-SDC-Impa/Products/tree/main/getting-started.md)
 
 ## Contributors
 
