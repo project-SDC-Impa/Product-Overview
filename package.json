@@ -1,0 +1,32 @@
+{
+  "name": "impa-products",
+  "version": "1.0.0",
+  "description": "SDC - Products API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build-db": "psql postgres < schema.sql",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-SDC-Impa/Products.git"
+  },
+  "author": "Ryan Rhoads",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/project-SDC-Impa/Products/issues"
+  },
+  "homepage": "https://github.com/project-SDC-Impa/Products#readme",
+  "dependencies": {
+    "asyncawait": "^3.0.0",
+    "axios": "^0.21.4",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "nodemon": "^2.0.13",
+    "pg": "^8.7.1",
+    "postgres": "^1.0.2",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
