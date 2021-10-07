@@ -10,7 +10,8 @@ Our team was tasking with...
 
 Talk about Product Overview Endpoints - tell us something cool or noteworthy about your widget.
 
-- Talking Point 1
+- I was able to easily deploy my application to AWS using Docker containers.
+- I implemented NGinX as a reverse proxy-server to act as my load balancer allowing easy horizontal scaling dynamically based of traffic.
 
 ### Technologies Used
 
